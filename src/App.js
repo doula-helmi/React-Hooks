@@ -13,17 +13,16 @@ const App = () => {
     setFiltreBysearch(data);
   };
 
- 
-  const [Newrate, setNewrate] = useState();
-  const getNewrate = (data) => {
-    setNewrate(data);
-  };
-
-  const [FiltreByRate, setFiltreByRate] = useState(5);
+  const [FiltreByRate, setFiltreByRate] = useState(0);
   const getRate = (rate) => {
     setFiltreByRate(rate);
   };
 
+  const [Newrate, setNewrate] = useState(0);
+  const getNewrate = (data) => {
+    console.log('getNewrate',data)
+    setNewrate(data);
+  };
 
   const [NewTitle, setNewTtile] = useState();
 
@@ -45,7 +44,6 @@ const App = () => {
   }
 
 
-console.log(FiltreByRate)
   const AddNewMovie = () => {
     setList([
       {
@@ -72,7 +70,9 @@ console.log(FiltreByRate)
         senmoviePosterURL={getnewDescription}
       />
       <MovieList
-        list={List}
+        list={List.sort(((a, b) => {
+          return a.rating - b.rating;
+      }))}
         searchString={FiltreBysearch}
         rateValue={FiltreByRate}
       />

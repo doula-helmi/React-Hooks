@@ -5,13 +5,14 @@ import Rating from "@mui/material/Rating";
 const AddMovie = ({
   senmoviePosterURL,
   senMoviePostURL,
-  sendMovieRate,
   sendMovieTitle,
-  submitMovie,
+  submitMovie,sendMovieRate
 }) => {
-  const [rating, setrating] = useState();
+  const [rating, setrating] = useState(0);
+  console.log(rating)
   const ratingChanged = (event, newValue) => {
     setrating(newValue);
+    console.log(newValue)
   };
 
   const movieTitle = useRef();
@@ -31,9 +32,7 @@ const AddMovie = ({
     senmoviePosterURL(movieDescription.current.value);
   };
 
-  const hundelrate = () => {
-    sendMovieRate(rating);
-  };
+  
 
 
   const hundelClear = () => {
@@ -69,7 +68,7 @@ const AddMovie = ({
             />
           </div>
           <div className="info-section">
-            <span onClick={hundelrate}>
+            <span onClick={sendMovieRate(rating)}>
               <Rating name="simple-controlled" onChange={ratingChanged} precision={0.5}/>
             </span>
             <p>{rating}</p>

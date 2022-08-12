@@ -3,7 +3,7 @@ export const MovieList = ({ list, searchString, rateValue }) => {
   return (
     <div className="movielist">
       {list
-        .filter(({ rating }) => rating <= rateValue)
+        .filter(({ rating }) => rating >= rateValue)
         .filter(({ title }) => title.toLowerCase().includes(searchString))
         .map(({ title, description, rating, posterURL }, i) => (
           <MovieCard

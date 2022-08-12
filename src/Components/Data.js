@@ -19,15 +19,6 @@ export const Data =[
     },
     {
       id: Math.random(),
-      title: "The Shawshank Redemption",
-      description:
-        "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-      posterURL:
-        "https://m.media-amazon.com/images/M/MV5BYTcxYTA0MjAtYzdjNC00ZmFmLTgwYWItMmVhYTY5ZGZhOWQzXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
-      rating: 5,
-    },
-    {
-      id: Math.random(),
       title: "The Godfather",
       description:
         "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
@@ -70,6 +61,16 @@ export const Data =[
       posterURL:
         "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_FMjpg_UX1000_.jpg",
       rating: 4.5,
+    }
+    ,
+    {
+      id: Math.random(),
+      title: "The Shawshank Redemption",
+      description:
+        "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      posterURL:
+        "https://m.media-amazon.com/images/M/MV5BYTcxYTA0MjAtYzdjNC00ZmFmLTgwYWItMmVhYTY5ZGZhOWQzXkEyXkFqcGdeQXVyMTAyOTE2ODg0._V1_.jpg",
+      rating: 5,
     },
     {
       id: Math.random(),

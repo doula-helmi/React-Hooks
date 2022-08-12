@@ -70,9 +70,7 @@ const App = () => {
         senmoviePosterURL={getnewDescription}
       />
       <MovieList
-        list={List.sort(((a, b) => {
-          return a.rating - b.rating;
-      }))}
+        list={List}
         searchString={FiltreBysearch}
         rateValue={FiltreByRate}
       />
